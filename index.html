@@ -8,10 +8,9 @@
     <meta name="google-site-verification" content="2ROwP7OPCiEaFvrgnmBBXlmgdzVLOo0lSwdGM-UgIfI" />
     
     <style>
-        :root { --primary: #00ff82; --dark: #020617; --card-bg: #0f172a; }
+        :root { --primary: #00ff82; --dark: #020617; }
         body { font-family: 'Inter', sans-serif; background: var(--dark); color: #fff; margin: 0; overflow-x: hidden; }
         
-        /* Hero Section Refinada */
         .hero { display: flex; align-items: center; justify-content: space-between; max-width: 1200px; margin: auto; padding: 80px 20px; gap: 40px; }
         .hero-text { flex: 1; }
         .hero-image { flex: 1; text-align: center; }
@@ -19,45 +18,52 @@
 
         h1 { font-size: 3.8rem; font-weight: 900; line-height: 1; margin: 0 0 25px; }
         h1 span { color: var(--primary); }
+        
         .checklist { list-style: none; padding: 0; margin: 30px 0; }
         .checklist li { margin-bottom: 15px; font-weight: 600; display: flex; align-items: center; gap: 12px; font-size: 1.1rem; }
         .checklist li::before { content: '❌'; }
 
-        /* Carrossel de Depoimentos (Prova Social) */
-        .carousel-container { padding: 60px 0; background: #070e1d; overflow: hidden; position: relative; }
+        /* BOTÃO PULSANTE - O SEGREDO DA CONVERSÃO */
+        .cta-btn { 
+            display: inline-block; background: var(--primary); color: #000; padding: 25px 60px; 
+            font-size: 1.5rem; font-weight: 900; border-radius: 100px; text-decoration: none;
+            transition: 0.4s; text-transform: uppercase; margin-top: 40px;
+            box-shadow: 0 0 0 0 rgba(0, 255, 130, 0.7);
+            animation: pulse-green 2s infinite;
+        }
+
+        @keyframes pulse-green {
+            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(0, 255, 130, 0.7); }
+            70% { transform: scale(1); box-shadow: 0 0 0 20px rgba(0, 255, 130, 0); }
+            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(0, 255, 130, 0); }
+        }
+
+        .cta-btn:hover { transform: scale(1.1); filter: brightness(1.1); }
+
+        /* Carrossel e Provas */
+        .carousel-container { padding: 60px 0; background: #070e1d; overflow: hidden; }
         .carousel-track { display: flex; width: calc(300px * 10); animation: scroll 30s linear infinite; }
-        .carousel-track:hover { animation-play-state: paused; }
         .slide { width: 300px; padding: 0 15px; flex-shrink: 0; }
-        .slide img { width: 100%; border-radius: 15px; border: 2px solid #1e293b; transition: 0.3s; }
-        .slide img:hover { border-color: var(--primary); transform: scale(1.05); }
+        .slide img { width: 100%; border-radius: 15px; border: 2px solid #1e293b; }
 
         @keyframes scroll {
             0% { transform: translateX(0); }
             100% { transform: translateX(calc(-300px * 5)); }
         }
 
-        /* Seção de Faturamento Profissional */
+        /* Rodapé com Logo Kiwify */
         .revenue-info { padding: 80px 20px; text-align: center; }
         .revenue-card { 
             background: #fff; color: #020617; padding: 40px; border-radius: 20px; 
-            max-width: 500px; margin: auto; display: flex; flex-direction: column; align-items: center;
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            max-width: 500px; margin: auto; box-shadow: 0 25px 50px rgba(0,0,0,0.5);
         }
-        .revenue-card span { font-weight: 700; color: #64748b; text-transform: uppercase; letter-spacing: 1px; }
         .revenue-card h2 { font-size: 3rem; margin: 10px 0; font-weight: 900; }
-
-        .cta-btn { 
-            display: inline-block; background: var(--primary); color: #000; padding: 25px 60px; 
-            font-size: 1.5rem; font-weight: 900; border-radius: 100px; text-decoration: none;
-            transition: 0.4s; text-transform: uppercase; margin-top: 40px;
-            box-shadow: 0 10px 40px rgba(0, 255, 130, 0.2);
-        }
-        .cta-btn:hover { transform: scale(1.05); box-shadow: 0 15px 50px rgba(0, 255, 130, 0.4); }
+        
+        .kiwify-footer-img { width: 100%; max-width: 180px; margin-top: 20px; opacity: 0.9; }
 
         @media (max-width: 900px) {
-            .hero { flex-direction: column; text-align: center; padding: 40px 20px; }
+            .hero { flex-direction: column; text-align: center; }
             h1 { font-size: 2.8rem; }
-            .hero-image img { max-width: 100%; }
         }
     </style>
 </head>
@@ -78,17 +84,14 @@
         </div>
     </section>
 
-    <!-- CARROSSEL DE DEPOIMENTOS -->
     <div class="carousel-container">
-        <h3 style="text-align: center; color: var(--primary); margin-bottom: 40px; text-transform: uppercase; letter-spacing: 2px;">Resultados da nossa Sociedade</h3>
         <div class="carousel-track">
-            <!-- As imagens se repetem para o efeito infinito -->
             <div class="slide"><img src="img1.png"></div>
             <div class="slide"><img src="img2.png"></div>
             <div class="slide"><img src="img3.png"></div>
             <div class="slide"><img src="img4.png"></div>
             <div class="slide"><img src="img5.png"></div>
-            <!-- Repetição para o loop -->
+            <!-- Repetição -->
             <div class="slide"><img src="img1.png"></div>
             <div class="slide"><img src="img2.png"></div>
             <div class="slide"><img src="img3.png"></div>
@@ -99,11 +102,14 @@
 
     <section class="revenue-info">
         <div class="revenue-card">
-            <span>Valor Líquido Recebido</span>
+            <span style="font-weight:700; color:#64748b;">Valor Líquido Recebido</span>
             <h2>R$ 63.455,86</h2>
-            <img src="https://logodownload.org/wp-content/uploads/2021/04/kiwify-logo.png" style="height: 25px; margin-top: 15px;" alt="Kiwify">
+            <!-- IMAGEM DA KIWIFY QUE VOCÊ VAI SUBIR -->
+            <img src="kiwify-logo.png" class="kiwify-footer-img" alt="Pagamento Seguro Kiwify">
         </div>
-        <p style="margin-top: 40px; color: #475569;">Inovar Digital © 2026 - Víctor Trivinho - Guarulhos, SP</p>
+        <p style="margin-top: 40px; color: #475569; font-size: 0.9rem;">
+            Inovar Digital © 2026 - Víctor Trivinho - Guarulhos, SP
+        </p>
     </section>
 
 </body>
