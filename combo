@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OFERTA ÚNICA - Combo Low Ticket</title>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #050505; color: #fff; margin: 0; text-align: center; }
+        .top-bar { background: #ffcc00; color: #000; padding: 15px; font-weight: bold; font-size: 1.1rem; }
+        .container { padding: 40px 20px; max-width: 800px; margin: auto; }
+        h1 { color: #00ff82; font-size: 2.5rem; }
+        .price-tag { font-size: 3rem; font-weight: bold; margin: 20px 0; color: #fff; }
+        .old-price { text-decoration: line-through; color: #ff4444; font-size: 1.5rem; }
+        .cta-btn { 
+            display: inline-block; background: #00ff82; color: #000; padding: 25px 50px; 
+            font-size: 1.5rem; font-weight: bold; border-radius: 50px; text-decoration: none;
+            box-shadow: 0 10px 30px rgba(0, 255, 130, 0.4); transition: 0.3s;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.05); } 100% { transform: scale(1); } }
+        .proof-img { width: 100%; max-width: 400px; border-radius: 10px; margin: 10px; border: 2px solid #333; }
+    </style>
+</head>
+<body>
+    <div class="top-bar">⚠️ ESPERE! NÃO FECHE ESTA PÁGINA. TENHO UMA PROPOSTA ESPECIAL.</div>
+    
+    <div class="container">
+        <p>Eu entendo que talvez R$ 47,00 não seja o momento para você agora...</p>
+        <h1>Leve o Combo Completo por um valor simbólico!</h1>
+        <p>Acesso imediato às estratégias que estão gerando vendas diárias em Guarulhos e em todo o Brasil.</p>
+
+        <div class="price-tag">
+            <span class="old-price">De R$ 97,00</span><br>
+            Por apenas <span style="color: #00ff82;">R$ 19,90</span>
+        </div>
+
+        <!-- LINK DE AFILIADO DO CHECKOUT DE 19,90 -->
+        <a href="https://pay.kiwify.com.br/OmbboPD?afid=2uYO7ipL" class="cta-btn">QUERO O COMBO POR R$ 19,90</a>
+
+        <div style="margin-top: 50px;">
+            <h3>Veja quem já aproveitou essa oferta:</h3>
+            <!-- Usando suas imagens recortadas -->
+            <img src="img2.png" class="proof-img" alt="Depoimento 2">
+            <img src="img3.png" class="proof-img" alt="Depoimento 3">
+        </div>
+    </div>
+</body>
+</html>
