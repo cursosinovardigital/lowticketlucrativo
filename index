@@ -4,34 +4,110 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Low Ticket Lucrativo - Sociedade Víctor Trivinho</title>
+    <!-- SEO Básico -->
+    <meta name="description" content="Aprenda a vender produtos de baixo ticket todos os dias com a estratégia de sociedade. Provas sociais reais.">
+    
     <style>
-        body { font-family: 'Inter', sans-serif; background-color: #050505; color: #fff; margin: 0; text-align: center; }
-        .header-warning { background: #ff0000; padding: 8px; font-weight: bold; font-size: 14px; }
-        .hero { padding: 80px 20px; }
-        h1 { font-size: 3rem; line-height: 1.1; margin-bottom: 20px; }
+        body { font-family: 'Inter', sans-serif; background-color: #050505; color: #fff; margin: 0; text-align: center; line-height: 1.6; }
+        .header-warning { background: #ff0000; padding: 10px; font-weight: bold; font-size: 14px; text-transform: uppercase; }
+        .hero { padding: 60px 20px; }
+        h1 { font-size: 2.8rem; line-height: 1.1; margin-bottom: 20px; }
         .green { color: #00ff82; }
+        
+        /* Prova Social Viva (Vendas Caindo) */
+        .results-scroll { display: flex; overflow-x: auto; gap: 20px; padding: 20px; margin: 40px 0; background: #111; }
+        .result-card { background: #1a1a1a; padding: 20px; border-radius: 12px; min-width: 250px; border: 1px solid #333; text-align: left;}
+        .result-card h3 { color: #00ff82; margin: 0; font-size: 1.8rem;}
+        .result-card p { color: #aaa; margin: 5px 0 0; font-size: 0.9rem;}
+
         .cta-btn { 
-            display: inline-block; background: #00ff82; color: #000; padding: 25px 45px; 
-            font-size: 1.5rem; font-weight: bold; border-radius: 50px; text-decoration: none;
-            box-shadow: 0 10px 30px rgba(0, 255, 130, 0.3); transition: 0.3s;
+            display: inline-block; background: #00ff82; color: #000; padding: 22px 40px; 
+            font-size: 1.4rem; font-weight: bold; border-radius: 50px; text-decoration: none;
+            box-shadow: 0 10px 30px rgba(0, 255, 130, 0.4); transition: 0.3s;
+            animation: pulse 2s infinite; margin: 40px 0;
         }
-        .cta-btn:hover { transform: scale(1.05); }
-        .footer { margin-top: 100px; padding: 40px; color: #444; border-top: 1px solid #222; }
+        @keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.05); } 100% { transform: scale(1); } }
+
+        /* Depoimentos de WhatsApp Organizados */
+        .proof-section { padding: 60px 20px; background-color: #0d0d0d; }
+        .proof-container {
+            max-width: 1000px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+        .whatsapp-proof {
+            background: #fff;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+            border: 2px solid transparent;
+            transition: 0.3s;
+        }
+        .whatsapp-proof:hover { border-color: #00ff82; transform: translateY(-5px); }
+        /* AJUSTE PARA IMAGENS NA RAIZ */
+        .whatsapp-proof img { width: 100%; display: block; height: auto;}
+
+        .guarantee { margin: 80px auto; padding: 40px; max-width: 600px; background: #111; border: 1px dashed #00ff82; border-radius: 20px; }
+        .guarantee h2 { color: #00ff82; margin-top: 0;}
+
+        footer { padding: 40px; color: #444; font-size: 12px; border-top: 1px solid #222; margin-top: 80px; }
     </style>
 </head>
 <body>
-    <div class="header-warning">⚠️ ESTA OFERTA PODE SAIR DO AR A QUALQUER MOMENTO</div>
+    <div class="header-warning">🔥 OPORTUNIDADE ÚNICA: ENTRE PARA A SOCIEDADE HOJE</div>
     
     <section class="hero">
-        <h1>Venda todos os dias e lucre de <br><span class="green">R$ 100 a R$ 500 diariamente</span></h1>
-        <p style="font-size: 1.2rem; color: #aaa;">Acesso exclusivo à estratégia de Sociedade para produtos de baixo ticket.</p>
+        <p style="color: #00ff82; font-weight: bold; text-transform: uppercase;">[ EXCLUSIVO PARA O PERFIL @VICTORTRIVINHO ]</p>
+        <h1>A Estratégia de <span class="green">Vendas Automáticas</span> que o mercado tentou esconder</h1>
+        <p style="font-size: 1.2rem; color: #aaa;">Copie o modelo de "Low Ticket" e lucre de R$ 100 a R$ 500 por dia sem precisar de grandes investimentos.</p>
         
-        <br><br>
-        <a href="https://pay.kiwify.com.br/OmbboPD?afid=2uYO7ipL" class="cta-btn">QUERO ME TORNAR SÓCIO AGORA</a>
+        <!-- SEU LINK DE AFILIADO DA PÁGINA DE VENDAS PRINCIPAL -->
+        <a href="https://kiwify.app/Ud3sieV?afid=2uYO7ipL" class="cta-btn">QUERO ME TORNAR SÓCIO AGORA</a>
     </section>
 
-    <div class="footer">
-        <p>Inovar Digital © 2026 - Víctor Soati Ávila Trivinho</p>
+    <!-- Seção de Provas Sociais Dinâmicas (Vendas Caindo) -->
+    <div class="results-scroll">
+        <div class="result-card"><h3>+ R$ 47,00</h3><p>Venda Realizada (Ontem)</p></div>
+        <div class="result-card"><h3>+ R$ 197,00</h3><p>Venda Realizada (Hoje)</p></div>
+        <div class="result-card"><h3>+ R$ 29,90</h3><p>Venda Realizada (Há 2 horas)</p></div>
+        <div class="result-card"><h3>+ R$ 47,00</h3><p>Venda Realizada (Há 1 hora)</p></div>
     </div>
+
+    <!-- Depoimentos de WhatsApp OTIMIZADOS PARA ORGÂNICO -->
+    <section class="proof-section">
+        <h2 style="font-size: 2.2rem; margin-bottom: 10px;">Resultados Reais de Pessoas Comuns</h2>
+        <p style="color: #aaa; margin-bottom: 40px; max-width: 600px; margin-left: auto; margin-right: auto;">Veja o que os novos sócios estão falando no nosso grupo exclusivo de suporte.</p>
+        
+        <div class="proof-container">
+            <!-- Depoimento 1 (Lucas) - APONTANDO PARA A RAIZ -->
+            <div class="whatsapp-proof"><img src="img1.png" alt="Depoimento de aluno sobre vendas rápidas"></div>
+            <!-- Depoimento 2 (Ana) - APONTANDO PARA A RAIZ -->
+            <div class="whatsapp-proof"><img src="img2.png" alt="Depoimento de aluno sobre volume de vendas"></div>
+            <!-- Depoimento 3 (Beatriz) - APONTANDO PARA A RAIZ -->
+            <div class="whatsapp-proof"><img src="img3.png" alt="Depoimento de aluno sobre primeira venda"></div>
+            <!-- Depoimento 4 (Marcos) - APONTANDO PARA A RAIZ -->
+            <div class="whatsapp-proof"><img src="img4.png" alt="Depoimento de aluno sobre recuperação de investimento"></div>
+            <!-- Depoimento 5 (Felipe) - APONTANDO PARA A RAIZ -->
+            <div class="whatsapp-proof"><img src="img5.png" alt="Depoimento de aluno sobre suporte e comunidade"></div>
+        </div>
+    </section>
+
+    <div class="guarantee">
+        <h2>🔒 7 DIAS DE GARANTIA INCONDICIONAL</h2>
+        <p>Se você não gostar de qualquer coisa, eu devolvo seu dinheiro na hora. O risco é todo meu. Você tem minha palavra.</p>
+    </div>
+
+    <div style="margin: 80px 0;">
+        <!-- SEU LINK DE AFILIADO DO CHECKOUT (R$ 47) -->
+        <a href="https://pay.kiwify.com.br/OmbboPD?afid=2uYO7ipL" class="cta-btn">GARANTIR MINHA VAGA NA SOCIEDADE</a>
+    </div>
+
+    <footer>
+        <p>Inovar Digital © 2026 - Víctor Soati Ávila Trivinho - CNPJ: XX.XXX.XXX/0001-XX</p>
+        <p>Este site não faz parte do Google ou Facebook. Os resultados variam de pessoa para pessoa.</p>
+        <p>Guarulhos - SP</p>
+    </footer>
 </body>
 </html>
