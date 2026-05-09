@@ -6,7 +6,6 @@
     <title>Como Criar uma Renda Automática com Low Ticket em 2026 | Inovar Digital</title>
     <meta name="description" content="Descubra o guia definitivo de Víctor Trivinho para faturar com infoprodutos de baixo ticket. Estratégias validadas para vendas automáticas diárias.">
     
-    <!-- JSON-LD para Google (FAQ e Artigo) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -24,10 +23,8 @@
         :root { --primary: #00ff82; --dark-bg: #020617; --card-bg: #0f172a; --text: #f1f5f9; }
         body { font-family: 'Inter', -apple-system, sans-serif; background: var(--dark-bg); color: var(--text); line-height: 1.8; margin: 0; }
         
-        /* Layout Estilo Reev */
         .wrapper { display: grid; grid-template-columns: 250px 1fr; max-width: 1200px; margin: auto; gap: 40px; padding: 40px 20px; }
         
-        /* Sidebar que acompanha a rolagem */
         aside { position: sticky; top: 20px; height: fit-content; border-right: 1px solid #1e293b; padding-right: 20px; }
         aside h4 { color: var(--primary); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; }
         aside a { display: block; color: #94a3b8; text-decoration: none; margin: 15px 0; font-size: 0.9rem; transition: 0.3s; }
@@ -35,31 +32,33 @@
 
         article { max-width: 800px; }
         h1 { font-size: 3rem; font-weight: 800; line-height: 1.1; margin-bottom: 30px; }
-        h2 { font-size: 2rem; margin-top: 50px; color: var(--primary); }
+        h2 { font-size: 2rem; margin-top: 50px; color: var(--primary); border-bottom: 1px solid #1e293b; padding-bottom: 10px; }
+        h3 { font-size: 1.5rem; margin-top: 30px; color: #fff; }
         
         .author-box { display: flex; align-items: center; gap: 15px; margin-bottom: 40px; padding-bottom: 20px; border-bottom: 1px solid #1e293b; }
         .author-box img { width: 50px; height: 50px; border-radius: 50%; }
 
-        /* Imagem Ajustada e Proporcional */
+        /* FOTO AJUSTADA PARA NÃO FICAR DESPROPORCIONAL */
         .featured-img { 
             width: 100%; 
-            max-width: 600px; 
+            max-width: 500px; /* Reduzido para melhor harmonia */
             height: auto; 
             display: block;
-            margin: 30px auto; 
+            margin: 40px auto; 
             border-radius: 16px; 
-            box-shadow: 0 15px 35px rgba(0,0,0,0.4); 
+            box-shadow: 0 15px 35px rgba(0,0,0,0.5); 
         }
 
         .cta-banner { background: linear-gradient(135deg, #0f172a, #1e293b); border: 2px solid var(--primary); padding: 40px; border-radius: 20px; text-align: center; margin: 50px 0; }
         .btn { background: var(--primary); color: #000; padding: 20px 40px; text-decoration: none; font-weight: 900; border-radius: 50px; display: inline-block; animation: pulse 2s infinite; }
         
-        /* Galeria de Resultados */
         .results-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 40px 0; }
         .results-grid img { width: 100%; border-radius: 12px; border: 1px solid #334155; }
 
+        .info-card { background: #161b22; padding: 25px; border-radius: 12px; margin: 25px 0; border-left: 4px solid var(--primary); }
+
         @keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.05); } 100% { transform: scale(1); } }
-        @media (max-width: 900px) { .wrapper { grid-template-columns: 1fr; } aside { display: none; } h1 { font-size: 2.2rem; } }
+        @media (max-width: 900px) { .wrapper { grid-template-columns: 1fr; } aside { display: none; } h1 { font-size: 2.2rem; } .featured-img { max-width: 100%; } }
     </style>
 </head>
 <body>
@@ -67,11 +66,12 @@
 <div class="wrapper">
     <aside>
         <h4>Conteúdo</h4>
-        <a href="#intro">Introdução</a>
-        <a href="#por-que">Por que Low Ticket?</a>
+        <a href="#intro">O que é Low Ticket</a>
+        <a href="#isca-vs-low">Isca vs Low Ticket</a>
+        <a href="#funil">Funil na Prática</a>
         <a href="#resultados">Resultados Reais</a>
-        <a href="#como-fazer">Como começar hoje</a>
-        <a href="#faq">Perguntas Frequentes</a>
+        <a href="#formatos">Melhores Formatos</a>
+        <a href="#faq">FAQ</a>
     </aside>
 
     <article>
@@ -83,38 +83,58 @@
             </div>
         </div>
 
-        <h1 id="intro">Como Escalar suas Vendas no Automático com o Método Low Ticket</h1>
+        <h1 id="intro">Low Ticket: Como usar essa estratégia para vender mais produtos digitais</h1>
         
-        <p>Você já se perguntou por que alguns empreendedores parecem vender todos os dias enquanto outros lutam para fechar uma única venda? O segredo não está na quantidade de seguidores, mas no <strong>modelo de negócio</strong>.</p>
+        <p>A estratégia <strong>low ticket</strong> ganhou força porque o tráfego está mais caro e o lead tem exigido um maior grau de confiança antes de investir alto. Atrair e engajar o cliente por meio de uma primeira compra com um produto acessível se tornou a base para escalar qualquer negócio digital hoje.</p>
 
-        <img src="produto1.jpg" class="featured-img" alt="Painel de faturamento Víctor Trivinho">
+        <img src="produto1.jpg" class="featured-img" alt="Resultados Inovar Digital">
 
-        <h2 id="por-que">Por que o Baixo Ticket é a melhor escolha para 2026?</h2>
-        <p>Produtos de baixo ticket (entre R$ 19,90 e R$ 47,00) quebram a principal barreira do cliente: o medo de perder dinheiro. Ao oferecer um valor simbólico, você foca no volume e na criação de uma base de clientes que poderá comprar seus produtos mais caros no futuro.</p>
+        <h2 id="isca-vs-low">Isca Digital Gratuita x High Ticket x Low Ticket</h2>
+        <p>Entender a diferença entre esses conceitos é o diferencial para construir funis rentáveis. Pense neles como degraus de uma escada de confiança:</p>
+        
+        <div class="info-card">
+            <strong>Isca Gratuita (R$0):</strong> Alto alcance, mas baixa taxa de compromisso. Útil para captar o contato inicial.<br><br>
+            <strong>Low Ticket (Até R$97):</strong> Valida o lead com uma compra inicial. Quem paga, mesmo pouco, demonstra intenção real de resolver um problema.<br><br>
+            <strong>High Ticket (R$997+):</strong> Exige confiança extrema e prova de valor consistente. É onde o lucro maior acontece após a barreira do Low Ticket ser quebrada.
+        </div>
+
+        <h2 id="funil">Como funciona um funil na prática?</h2>
+        <p>O funil deve focar em um fluxo previsível de atração e conversão rápida. Veja as etapas cruciais:</p>
+        <h3>1. Anúncio e Conteúdo</h3>
+        <p>A aquisição combina tráfego pago e conteúdo educativo. No orgânico, posts que resolvem dores específicas direcionam ao checkout, validando a demanda com métricas claras de ROI.</p>
+        
+        <h3>2. Entrega Automática</h3>
+        <p>Logo após o pagamento, o acesso imediato garante satisfação. Isso aumenta a retenção e prepara o cliente para o próximo passo no seu ecossistema.</p>
 
         <div class="cta-banner">
-            <h3>🚀 Quer copiar minha estrutura agora?</h3>
-            <p>Liberei o acesso ao meu combo secreto por um valor promocional para os leitores do blog.</p>
-            <a href="index.html" class="btn">QUERO ACESSAR AGORA</a>
+            <h3>🚀 Pronto para pular a teoria?</h3>
+            <p>Copie a minha estrutura exata que gerou mais de R$ 63 mil líquidos em vendas automáticas.</p>
+            <a href="index.html" class="btn">QUERO COMEÇAR AGORA</a>
         </div>
 
-        <h2 id="resultados">Provas que o sistema é validado</h2>
-        <p>O que você vê abaixo não são apenas prints, são vidas transformadas pela liberdade geográfica e financeira que o digital proporciona.</p>
+        <h2 id="resultados">Provas que o sistema funciona</h2>
+        <p>A transação inicial supera as iscas gratuitas porque identifica compradores "quentes" para campanhas de remarketing e upsell.</p>
         
         <div class="results-grid">
-            <img src="img1.png" alt="Resultado 1">
-            <img src="img2.png" alt="Resultado 2">
-            <img src="img3.png" alt="Resultado 3">
-            <img src="img4.png" alt="Resultado 4">
+            <img src="img1.png" alt="Venda Aprovada 1">
+            <img src="img2.png" alt="Venda Aprovada 2">
+            <img src="img3.png" alt="Venda Aprovada 3">
+            <img src="img4.png" alt="Venda Aprovada 4">
         </div>
 
-        <h2 id="como-fazer">Como configurar suas vendas ainda hoje</h2>
-        <p>Para rankear no Google e vender, você precisa de três pilares: Uma oferta irresistível, uma página rápida (como esta que você está lendo) e tráfego qualificado.</p>
+        <h2 id="formatos">Quais infoprodutos funcionam melhor?</h2>
+        <p>Formatos objetivos, aplicáveis e que entregam resultado imediato reduzem a fricção de compra:</p>
+        <ul>
+            <li><strong>Templates Prontos:</strong> Para execução imediata.</li>
+            <li><strong>Modelos de Contrato:</strong> Editáveis e profissionais.</li>
+            <li><strong>Planilhas:</strong> Automatizadas para resolver problemas pontuais.</li>
+            <li><strong>Mini Cursos:</strong> Rápidos e direto ao ponto.</li>
+        </ul>
 
         <h2 id="faq">Dúvidas Frequentes (FAQ)</h2>
-        <div style="background: var(--card-bg); padding: 20px; border-radius: 12px; margin-top: 20px;">
-            <p><strong>Preciso aparecer para vender?</strong><br>Não! O método foi desenhado para quem quer atuar nos bastidores.</p>
-            <p><strong>O curso serve para iniciantes?</strong><br>Sim, o foco é justamente tirar você do zero no menor tempo possível.</p>
+        <div style="background: var(--card-bg); padding: 30px; border-radius: 12px; margin-top: 20px;">
+            <p><strong>Dá para vender sem produzir conteúdo infinito?</strong><br>Sim. O foco do Low Ticket é a oferta direta e o tráfego de intenção.</p>
+            <p><strong>A entrega é realmente automática?</strong><br>Sim, através de plataformas seguras como a Kiwify, o cliente recebe o acesso segundos após a aprovação.</p>
         </div>
     </article>
 </div>
