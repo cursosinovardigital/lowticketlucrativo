@@ -3,101 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Low Ticket Lucrativo - Sociedade Víctor Trivinho</title>
+    <title>Low Ticket Lucrativo | Método Víctor Trivinho</title>
     
-    <!-- VERIFICAÇÃO GOOGLE SEARCH CONSOLE -->
     <meta name="google-site-verification" content="2ROwP7OPCiEaFvrgnmBBXlmgdzVLOo0lSwdGM-UgIfI" />
     
-    <!-- SEO Básico -->
-    <meta name="description" content="Aprenda a vender produtos de baixo ticket todos os dias com a estratégia de sociedade. Provas sociais reais.">
-    
     <style>
-        body { font-family: 'Inter', sans-serif; background-color: #050505; color: #fff; margin: 0; text-align: center; line-height: 1.6; }
-        .header-warning { background: #ff0000; padding: 10px; font-weight: bold; font-size: 14px; text-transform: uppercase; }
-        .hero { padding: 60px 20px; }
-        h1 { font-size: 2.8rem; line-height: 1.1; margin-bottom: 20px; }
-        .green { color: #00ff82; }
+        :root { --primary: #00ff82; --dark: #020617; --card-bg: #0f172a; }
+        body { font-family: 'Inter', sans-serif; background: var(--dark); color: #fff; margin: 0; overflow-x: hidden; }
         
-        /* Prova Social Viva */
-        .results-scroll { display: flex; overflow-x: auto; gap: 20px; padding: 20px; margin: 40px 0; background: #111; }
-        .result-card { background: #1a1a1a; padding: 20px; border-radius: 12px; min-width: 250px; border: 1px solid #333; text-align: left;}
-        .result-card h3 { color: #00ff82; margin: 0; font-size: 1.8rem;}
-        .result-card p { color: #aaa; margin: 5px 0 0; font-size: 0.9rem;}
+        /* Hero Section Refinada */
+        .hero { display: flex; align-items: center; justify-content: space-between; max-width: 1200px; margin: auto; padding: 80px 20px; gap: 40px; }
+        .hero-text { flex: 1; }
+        .hero-image { flex: 1; text-align: center; }
+        .hero-image img { width: 100%; max-width: 480px; border-radius: 24px; box-shadow: 0 0 60px rgba(0,255,130,0.1); }
+
+        h1 { font-size: 3.8rem; font-weight: 900; line-height: 1; margin: 0 0 25px; }
+        h1 span { color: var(--primary); }
+        .checklist { list-style: none; padding: 0; margin: 30px 0; }
+        .checklist li { margin-bottom: 15px; font-weight: 600; display: flex; align-items: center; gap: 12px; font-size: 1.1rem; }
+        .checklist li::before { content: '❌'; }
+
+        /* Carrossel de Depoimentos (Prova Social) */
+        .carousel-container { padding: 60px 0; background: #070e1d; overflow: hidden; position: relative; }
+        .carousel-track { display: flex; width: calc(300px * 10); animation: scroll 30s linear infinite; }
+        .carousel-track:hover { animation-play-state: paused; }
+        .slide { width: 300px; padding: 0 15px; flex-shrink: 0; }
+        .slide img { width: 100%; border-radius: 15px; border: 2px solid #1e293b; transition: 0.3s; }
+        .slide img:hover { border-color: var(--primary); transform: scale(1.05); }
+
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(calc(-300px * 5)); }
+        }
+
+        /* Seção de Faturamento Profissional */
+        .revenue-info { padding: 80px 20px; text-align: center; }
+        .revenue-card { 
+            background: #fff; color: #020617; padding: 40px; border-radius: 20px; 
+            max-width: 500px; margin: auto; display: flex; flex-direction: column; align-items: center;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        }
+        .revenue-card span { font-weight: 700; color: #64748b; text-transform: uppercase; letter-spacing: 1px; }
+        .revenue-card h2 { font-size: 3rem; margin: 10px 0; font-weight: 900; }
 
         .cta-btn { 
-            display: inline-block; background: #00ff82; color: #000; padding: 22px 40px; 
-            font-size: 1.4rem; font-weight: bold; border-radius: 50px; text-decoration: none;
-            box-shadow: 0 10px 30px rgba(0, 255, 130, 0.4); transition: 0.3s;
-            animation: pulse 2s infinite; margin: 40px 0;
+            display: inline-block; background: var(--primary); color: #000; padding: 25px 60px; 
+            font-size: 1.5rem; font-weight: 900; border-radius: 100px; text-decoration: none;
+            transition: 0.4s; text-transform: uppercase; margin-top: 40px;
+            box-shadow: 0 10px 40px rgba(0, 255, 130, 0.2);
         }
-        @keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.05); } 100% { transform: scale(1); } }
+        .cta-btn:hover { transform: scale(1.05); box-shadow: 0 15px 50px rgba(0, 255, 130, 0.4); }
 
-        /* Depoimentos de WhatsApp */
-        .proof-section { padding: 60px 20px; background-color: #0d0d0d; }
-        .proof-container {
-            max-width: 1000px;
-            margin: auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
+        @media (max-width: 900px) {
+            .hero { flex-direction: column; text-align: center; padding: 40px 20px; }
+            h1 { font-size: 2.8rem; }
+            .hero-image img { max-width: 100%; }
         }
-        .whatsapp-proof {
-            background: #fff;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
-            border: 2px solid transparent;
-            transition: 0.3s;
-        }
-        .whatsapp-proof:hover { border-color: #00ff82; transform: translateY(-5px); }
-        .whatsapp-proof img { width: 100%; display: block; height: auto;}
-
-        .guarantee { margin: 80px auto; padding: 40px; max-width: 600px; background: #111; border: 1px dashed #00ff82; border-radius: 20px; }
-        .guarantee h2 { color: #00ff82; margin-top: 0;}
-
-        footer { padding: 40px; color: #444; font-size: 12px; border-top: 1px solid #222; margin-top: 80px; }
     </style>
 </head>
 <body>
-    <div class="header-warning">🔥 OPORTUNIDADE ÚNICA: ENTRE PARA A SOCIEDADE HOJE</div>
-    
+
     <section class="hero">
-        <p style="color: #00ff82; font-weight: bold; text-transform: uppercase;">[ EXCLUSIVO PARA O PERFIL @VICTORTRIVINHO ]</p>
-        <h1>A Estratégia de <span class="green">Vendas Automáticas</span> que o mercado tentou esconder</h1>
-        <p style="font-size: 1.2rem; color: #aaa;">Copie o modelo de "Low Ticket" e lucre de R$ 100 a R$ 500 por dia sem precisar de grandes investimentos.</p>
-        
-        <a href="https://kiwify.app/Ud3sieV?afid=2uYO7ipL" class="cta-btn">QUERO ME TORNAR SÓCIO AGORA</a>
-    </section>
-
-    <div class="results-scroll">
-        <div class="result-card"><h3>+ R$ 47,00</h3><p>Venda Realizada (Ontem)</p></div>
-        <div class="result-card"><h3>+ R$ 197,00</h3><p>Venda Realizada (Hoje)</p></div>
-        <div class="result-card"><h3>+ R$ 29,90</h3><p>Venda Realizada (Há 2 horas)</p></div>
-        <div class="result-card"><h3>+ R$ 47,00</h3><p>Venda Realizada (Há 1 hora)</p></div>
-    </div>
-
-    <section class="proof-section">
-        <h2 style="font-size: 2.2rem; margin-bottom: 10px;">Resultados Reais de Pessoas Comuns</h2>
-        <div class="proof-container">
-            <div class="whatsapp-proof"><img src="img1.png" alt="Depoimento 1"></div>
-            <div class="whatsapp-proof"><img src="img2.png" alt="Depoimento 2"></div>
-            <div class="whatsapp-proof"><img src="img3.png" alt="Depoimento 3"></div>
-            <div class="whatsapp-proof"><img src="img4.png" alt="Depoimento 4"></div>
-            <div class="whatsapp-proof"><img src="img5.png" alt="Depoimento 5"></div>
+        <div class="hero-text">
+            <h1>Copie o meu <span>Low Ticket</span> e venda no automático</h1>
+            <ul class="checklist">
+                <li>Sem precisar produzir conteúdo</li>
+                <li>Sem precisar aparecer</li>
+                <li>Sem depender de seguidores</li>
+            </ul>
+            <a href="https://kiwify.app/Ud3sieV?afid=2uYO7ipL" class="cta-btn">Quero começar agora</a>
+        </div>
+        <div class="hero-image">
+            <img src="produto1.jpg" alt="Resultados Víctor Trivinho">
         </div>
     </section>
 
-    <div class="guarantee">
-        <h2>🔒 7 DIAS DE GARANTIA INCONDICIONAL</h2>
-        <p>Se você não gostar de qualquer coisa, eu devolvo seu dinheiro na hora. O risco é todo meu.</p>
+    <!-- CARROSSEL DE DEPOIMENTOS -->
+    <div class="carousel-container">
+        <h3 style="text-align: center; color: var(--primary); margin-bottom: 40px; text-transform: uppercase; letter-spacing: 2px;">Resultados da nossa Sociedade</h3>
+        <div class="carousel-track">
+            <!-- As imagens se repetem para o efeito infinito -->
+            <div class="slide"><img src="img1.png"></div>
+            <div class="slide"><img src="img2.png"></div>
+            <div class="slide"><img src="img3.png"></div>
+            <div class="slide"><img src="img4.png"></div>
+            <div class="slide"><img src="img5.png"></div>
+            <!-- Repetição para o loop -->
+            <div class="slide"><img src="img1.png"></div>
+            <div class="slide"><img src="img2.png"></div>
+            <div class="slide"><img src="img3.png"></div>
+            <div class="slide"><img src="img4.png"></div>
+            <div class="slide"><img src="img5.png"></div>
+        </div>
     </div>
 
-    <div style="margin: 80px 0;">
-        <a href="https://pay.kiwify.com.br/OmbboPD?afid=2uYO7ipL" class="cta-btn">GARANTIR MINHA VAGA NA SOCIEDADE</a>
-    </div>
+    <section class="revenue-info">
+        <div class="revenue-card">
+            <span>Valor Líquido Recebido</span>
+            <h2>R$ 63.455,86</h2>
+            <img src="https://logodownload.org/wp-content/uploads/2021/04/kiwify-logo.png" style="height: 25px; margin-top: 15px;" alt="Kiwify">
+        </div>
+        <p style="margin-top: 40px; color: #475569;">Inovar Digital © 2026 - Víctor Trivinho - Guarulhos, SP</p>
+    </section>
 
-    <footer>
-        <p>Inovar Digital © 2026 - Víctor Soati Ávila Trivinho - Guarulhos - SP</p>
-    </footer>
 </body>
 </html>
