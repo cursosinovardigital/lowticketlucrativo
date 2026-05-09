@@ -3,13 +3,16 @@
   <url>
     <loc>https://cursosinovardigital.github.io/lowticketlucrativo/</loc>
     <lastmod>2026-05-09</lastmod>
+    <priority>1.0</priority>
   </url>
   <url>
     <loc>https://cursosinovardigital.github.io/lowticketlucrativo/blog.html</loc>
     <lastmod>2026-05-09</lastmod>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://cursosinovardigital.github.io/lowticketlucrativo/combo.html</loc>
     <lastmod>2026-05-09</lastmod>
+    <priority>0.9</priority>
   </url>
 </urlset>
