@@ -9,26 +9,52 @@
     <meta name="google-site-verification" content="2ROwP7OPCiEaFvrgnmBBXlmgdzVLOo0lSwdGM-UgIfI" />
     
     <style>
-        :root { --primary: #00ff82; --dark: #020617; }
+        :root { --primary: #00ff82; --dark: #020617; --card: #0f172a; }
         body { font-family: 'Inter', sans-serif; background: var(--dark); color: #fff; margin: 0; overflow-x: hidden; }
         
-        .hero { display: flex; align-items: center; justify-content: space-between; max-width: 1200px; margin: auto; padding: 80px 20px; gap: 40px; }
-        .hero-text { flex: 1; }
-        .hero-image { flex: 1; text-align: center; }
-        .hero-image img { width: 100%; max-width: 480px; border-radius: 24px; box-shadow: 0 0 60px rgba(0,255,130,0.1); }
+        .hero { 
+            display: flex; align-items: center; justify-content: space-between; 
+            max-width: 1200px; margin: auto; padding: 40px 20px; gap: 40px; min-height: 80vh; 
+        }
+        .hero-text { flex: 1.2; }
+        .hero-image { flex: 0.8; text-align: right; }
+        .hero-image img { width: 100%; max-width: 420px; border-radius: 24px; box-shadow: 0 0 60px rgba(0,255,130,0.1); }
 
-        h1 { font-size: 3.8rem; font-weight: 900; line-height: 1; margin: 0 0 25px; }
+        h1 { font-size: 3.5rem; font-weight: 900; line-height: 1.1; margin: 0 0 20px; }
         h1 span { color: var(--primary); }
         
-        .checklist { list-style: none; padding: 0; margin: 30px 0; }
-        .checklist li { margin-bottom: 15px; font-weight: 600; display: flex; align-items: center; gap: 12px; font-size: 1.1rem; }
-        .checklist li::before { content: '❌'; }
+        .features-grid { 
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+            max-width: 1200px; margin: 40px auto; gap: 20px; padding: 0 20px;
+        }
+        .feature-card { 
+            background: var(--card); padding: 30px; border-radius: 20px; 
+            border: 1px solid #1e293b; transition: 0.3s;
+        }
+        .feature-card:hover { border-color: var(--primary); transform: translateY(-5px); }
+        .feature-card h3 { margin: 0 0 10px; font-size: 1.3rem; }
+        .feature-card p { color: #94a3b8; font-size: 0.95rem; line-height: 1.5; }
+
+        .garantia-box { 
+            max-width: 800px; margin: 60px auto; background: linear-gradient(135deg, #0f172a, #020617);
+            border: 2px dashed var(--primary); border-radius: 24px; padding: 40px;
+            display: flex; align-items: center; gap: 30px;
+        }
+        .garantia-box img { width: 120px; }
+
+        /* Estilo para Títulos das Novas Seções */
+        .section-title { text-align: center; margin: 60px 0 30px; font-size: 2.2rem; font-weight: 800; }
+        .section-title span { color: var(--primary); }
+
+        /* Estilo para lista de Módulos / FAQ */
+        .content-list { max-width: 900px; margin: auto; padding: 0 20px; }
+        .list-item { background: var(--card); padding: 20px; border-radius: 15px; margin-bottom: 15px; border-left: 4px solid var(--primary); }
+        .list-item h4 { margin: 0 0 5px; color: var(--primary); }
 
         .cta-btn { 
-            display: inline-block; background: var(--primary); color: #000; padding: 25px 60px; 
-            font-size: 1.5rem; font-weight: 900; border-radius: 100px; text-decoration: none;
-            transition: 0.4s; text-transform: uppercase; margin-top: 40px;
-            box-shadow: 0 0 0 0 rgba(0, 255, 130, 0.7);
+            display: inline-block; background: var(--primary); color: #000; padding: 22px 50px; 
+            font-size: 1.3rem; font-weight: 900; border-radius: 100px; text-decoration: none;
+            transition: 0.4s; text-transform: uppercase; margin-top: 20px;
             animation: pulse-green 2s infinite;
         }
 
@@ -43,34 +69,26 @@
         .slide { width: 300px; padding: 0 15px; flex-shrink: 0; }
         .slide img { width: 100%; border-radius: 15px; border: 2px solid #1e293b; }
 
-        @keyframes scroll {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(calc(-300px * 5)); }
-        }
+        @keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(calc(-300px * 5)); } }
 
-        .revenue-info { padding: 80px 20px; text-align: center; }
         .revenue-card { 
             background: #fff; color: #020617; padding: 40px; border-radius: 20px; 
-            max-width: 500px; margin: auto; box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+            max-width: 500px; margin: 60px auto; text-align: center;
         }
-        .revenue-card h2 { font-size: 3rem; margin: 10px 0; font-weight: 900; }
-        .kiwify-footer-img { width: 100%; max-width: 180px; margin-top: 20px; opacity: 0.9; }
 
         @media (max-width: 900px) {
             .hero { flex-direction: column; text-align: center; }
-            h1 { font-size: 2.8rem; }
+            h1 { font-size: 2.5rem; }
+            .garantia-box { flex-direction: column; text-align: center; }
         }
     </style>
 </head>
 <body>
+
     <section class="hero">
         <div class="hero-text">
             <h1>Copie o meu <span>Low Ticket</span> e venda no automático</h1>
-            <ul class="checklist">
-                <li>Sem precisar produzir conteúdo</li>
-                <li>Sem precisar aparecer</li>
-                <li>Sem depender de seguidores</li>
-            </ul>
+            <p style="font-size: 1.2rem; color: #94a3b8;">A estratégia validada para faturar diário sem precisar de grandes investimentos ou audiência.</p>
             <a href="https://kiwify.app/Ud3sieV?afid=2uYO7ipL" class="cta-btn">Quero começar agora</a>
         </div>
         <div class="hero-image">
@@ -78,6 +96,57 @@
         </div>
     </section>
 
+    <!-- O QUE VOCÊ VAI RECEBER -->
+    <div class="features-grid">
+        <div class="feature-card">
+            <span style="font-size:2.5rem;">⚡</span>
+            <h3>Acesso Imediato</h3>
+            <p>Receba seus dados de acesso no e-mail segundos após a confirmação do pagamento.</p>
+        </div>
+        <div class="feature-card">
+            <span style="font-size:2.5rem;">🎯</span>
+            <h3>Funil Pronto</h3>
+            <p>A estrutura exata que gerou mais de R$ 63 mil para você apenas copiar e colar.</p>
+        </div>
+        <div class="feature-card">
+            <span style="font-size:2.5rem;">📱</span>
+            <h3>Suporte VIP</h3>
+            <p>Área de membros exclusiva para tirar dúvidas e acelerar sua implementação.</p>
+        </div>
+    </div>
+
+    <!-- SEÇÃO ADICIONAL: PARA QUEM É -->
+    <h2 class="section-title">Para quem é este <span>Método?</span></h2>
+    <div class="features-grid">
+        <div class="feature-card">
+            <p>✅ <strong>Iniciantes</strong> que querem começar no digital sem gastar rios de dinheiro.</p>
+        </div>
+        <div class="feature-card">
+            <p>✅ <strong>Afiliados</strong> que cansaram de lutar por migalhas e querem seu próprio produto.</p>
+        </div>
+        <div class="feature-card">
+            <p>✅ <strong>Empresários</strong> que desejam automatizar vendas e criar renda passiva real.</p>
+        </div>
+    </div>
+
+    <!-- SEÇÃO ADICIONAL: CONTEÚDO -->
+    <h2 class="section-title">O que você vai <span>Dominar:</span></h2>
+    <div class="content-list">
+        <div class="list-item">
+            <h4>Módulo 01: O Segredo do Baixo Ticket</h4>
+            <p>Como criar ofertas irresistíveis que vendem no primeiro contato.</p>
+        </div>
+        <div class="list-item">
+            <h4>Módulo 02: Máquina de Vendas no GitHub</h4>
+            <p>Aprenda a hospedar seu funil de graça e com alta velocidade (como este site).</p>
+        </div>
+        <div class="list-item">
+            <h4>Módulo 03: Tráfego de Alta Conversão</h4>
+            <p>Estratégias para atrair as pessoas certas sem precisar aparecer.</p>
+        </div>
+    </div>
+
+    <!-- CARROSSEL DE DEPOIMENTOS -->
     <div class="carousel-container">
         <div class="carousel-track">
             <div class="slide"><img src="img1.png"></div>
@@ -93,15 +162,38 @@
         </div>
     </div>
 
+    <!-- GARANTIA -->
+    <div class="garantia-box">
+        <img src="https://cdn-icons-png.flaticon.com/512/992/992001.png" alt="Selo 7 dias">
+        <div>
+            <h3 style="margin:0; color: var(--primary);">Risco Zero: 7 Dias de Garantia</h3>
+            <p style="margin: 10px 0 0; color: #94a3b8;">Teste o método por uma semana completa. Se não ficar satisfeito, devolvemos 100% do seu investimento sem perguntas.</p>
+        </div>
+    </div>
+
+    <!-- SEÇÃO ADICIONAL: FAQ -->
+    <h2 class="section-title">Perguntas <span>Frequentes</span></h2>
+    <div class="content-list">
+        <div class="list-item">
+            <h4>Preciso ter muitos seguidores?</h4>
+            <p>Não. O sistema é feito para vender através de tráfego direto, sem depender de audiência prévia.</p>
+        </div>
+        <div class="list-item">
+            <h4>O acesso é vitalício?</h4>
+            <p>Sim! Você paga uma única vez e terá acesso para sempre, incluindo todas as atualizações de 2026.</p>
+        </div>
+    </div>
+
     <section class="revenue-info">
         <div class="revenue-card">
             <span style="font-weight:700; color:#64748b;">Valor Líquido Recebido</span>
-            <h2>R$ 63.455,86</h2>
-            <img src="kiwify-logo.png" class="kiwify-footer-img" alt="Pagamento Seguro Kiwify">
+            <h2 style="font-size: 3rem; margin: 10px 0; font-weight: 900;">R$ 63.455,86</h2>
+            <img src="kiwify-logo.png" style="width:180px; margin-top:20px;" alt="Pagamento Seguro Kiwify">
         </div>
-        <p style="margin-top: 40px; color: #475569; font-size: 0.9rem;">
+        <p style="text-align:center; padding: 40px; color: #475569; font-size: 0.9rem;">
             Inovar Digital © 2026 - Víctor Trivinho - Guarulhos, SP
         </p>
     </section>
+
 </body>
 </html>
