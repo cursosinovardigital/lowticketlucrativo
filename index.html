@@ -24,7 +24,6 @@
         .checklist li { margin-bottom: 15px; font-weight: 600; display: flex; align-items: center; gap: 12px; font-size: 1.1rem; }
         .checklist li::before { content: '❌'; }
 
-        /* BOTÃO PULSANTE - O SEGREDO DA CONVERSÃO */
         .cta-btn { 
             display: inline-block; background: var(--primary); color: #000; padding: 25px 60px; 
             font-size: 1.5rem; font-weight: 900; border-radius: 100px; text-decoration: none;
@@ -39,9 +38,6 @@
             100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(0, 255, 130, 0); }
         }
 
-        .cta-btn:hover { transform: scale(1.1); filter: brightness(1.1); }
-
-        /* Carrossel e Provas */
         .carousel-container { padding: 60px 0; background: #070e1d; overflow: hidden; }
         .carousel-track { display: flex; width: calc(300px * 10); animation: scroll 30s linear infinite; }
         .slide { width: 300px; padding: 0 15px; flex-shrink: 0; }
@@ -52,14 +48,12 @@
             100% { transform: translateX(calc(-300px * 5)); }
         }
 
-        /* Rodapé com Logo Kiwify */
         .revenue-info { padding: 80px 20px; text-align: center; }
         .revenue-card { 
             background: #fff; color: #020617; padding: 40px; border-radius: 20px; 
             max-width: 500px; margin: auto; box-shadow: 0 25px 50px rgba(0,0,0,0.5);
         }
         .revenue-card h2 { font-size: 3rem; margin: 10px 0; font-weight: 900; }
-        
         .kiwify-footer-img { width: 100%; max-width: 180px; margin-top: 20px; opacity: 0.9; }
 
         @media (max-width: 900px) {
@@ -69,7 +63,6 @@
     </style>
 </head>
 <body>
-
     <section class="hero">
         <div class="hero-text">
             <h1>Copie o meu <span>Low Ticket</span> e venda no automático</h1>
@@ -92,7 +85,6 @@
             <div class="slide"><img src="img3.png"></div>
             <div class="slide"><img src="img4.png"></div>
             <div class="slide"><img src="img5.png"></div>
-            <!-- Repetição -->
             <div class="slide"><img src="img1.png"></div>
             <div class="slide"><img src="img2.png"></div>
             <div class="slide"><img src="img3.png"></div>
@@ -111,6 +103,5 @@
             Inovar Digital © 2026 - Víctor Trivinho - Guarulhos, SP
         </p>
     </section>
-
 </body>
 </html>
